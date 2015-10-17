@@ -10,8 +10,11 @@ if(!$conn){
 
 mysql_select_db("ChildAid");
 
-if(isset($_POST['idea'])){
-	$idea = $_POST['idea'];
+	
+
+	if(isset($_POST["idea"]))
+	$idea = $_POST["idea"];
+	
 
 	$sql = "SELECT comment from comments where idea_ID = (SELECT idea_ID from idea where description = '$idea')";
 
@@ -24,10 +27,8 @@ if(isset($_POST['idea'])){
 	while($row = mysql_fetch_array($retval)){
 		echo "{$row['comment']}<br>";
 	}
-}
-else{
-	echo "could not fetch data";
-}
+
+
 
 ?>
 
