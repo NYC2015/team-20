@@ -1,0 +1,169 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  </head>
+  <body style="background-color: #000000; font-family: 'Montserrat', sans-serif;">
+    <div class="container" style="color: #FFFFFF;">
+      <div class="w-section main-section" style="background-color: #16A4E7; border-radius: 6px;">
+        <div class="w-container">
+          <h1 class="main-heading">Job Club Ventures</h1>
+          <p class="main-subtitle" style="color: #FFFFFF;">Review and Submit Feedback on Ideas</p>
+        </div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div class="container">
+        <ol>
+          <li>
+            <div class="row">
+              <div class="col-xs-6 col-xs-push-1" id="idea1">Wedding Basket</div>
+              <div class="col-xs-3 col-xs-push-2" id="votes1">Votes: 20</div>
+              <div class="col-xs-3">
+                <button type="button" class="btn btn-info" onclick="upvote(1)">
+                  <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-danger" onclick="downvote(1)">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+            <div style="height: 10px;"></div>
+            <div class="row">
+              <div class="col-xs-6 col-xs-push-1">By Sam</div>
+              <div class="col-xs-6 col-xs-push-3">
+                <button type="button" class="btn btn-default" aria-label="Left Align" onclick="getIndex(1)">
+                  <span aria-hidden="true">Comments</span>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-xs-6 col-xs-push-1" id="idea1">Online candy Store</div>
+              <div class="col-xs-3 col-xs-push-2" id="votes1">Votes: 20</div>
+              <div class="col-xs-3">
+                <button type="button" class="btn btn-info" onclick="upvote(1)">
+                  <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-danger" onclick="downvote(1)">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+            <div style="height: 10px;"></div>
+            <div class="row">
+              <div class="col-xs-6 col-xs-push-1">By Demitri</div>
+              <div class="col-xs-6 col-xs-push-3">
+                <button type="button" class="btn btn-default" aria-label="Left Align" onclick="getIndex(1)">
+                  <span aria-hidden="true">Comments</span>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-xs-6 col-xs-push-1" id="idea2">Solar Powered Toothbrush</div>
+              <div class="col-xs-3 col-xs-push-2" id="votes2">Votes: 12</div>
+              <div class="col-xs-3">
+                <button type="button" class="btn btn-info" onclick="upvote(2)">
+                  <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-danger" onclick="downvote(2)">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+            <div style="height: 10px;"></div>
+            <div class="row">
+              <div class="col-xs-6 col-xs-push-1">By Elizabeth</div>
+              <div class="col-xs-6 col-xs-push-3">
+                <button type="button" class="btn btn-default" aria-label="Left Align" onclick="getIndex(2)">
+                  <span aria-hidden="true">Comments</span>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-xs-6 col-xs-push-1" id="idea3">Hydrogen Car</div>
+              <div class="col-xs-3 col-xs-push-2" id="votes3">Votes: 3</div>
+              <div class="col-xs-3">
+                <button type="button" class="btn btn-info" onclick="upvote(3)">
+                  <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-danger" onclick="downvote(3)">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+            <div style="height: 10px;"></div>
+            <div class="row">
+              <div class="col-xs-6 col-xs-push-1">By Rohith</div>
+              <div class="col-xs-6 col-xs-push-3">
+                <button type="button" class="btn btn-default" aria-label="Left Align" onclick="getIndex(3)">
+                  <span aria-hidden="true">Comments</span>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      function getIndex(i){
+        var index = "#idea" + i;
+        var content = $(index).text();
+
+        $.ajax({
+          type: 'POST',
+          url: 'get.php',
+          data:{
+             content: content
+          }
+        });
+      }
+    </script>
+    <script>
+      function upvote(i){
+        var index = "#idea" + i;
+        var content = $(index).text();
+
+        $.ajax({
+          type: 'POST',
+          url: 'get.php',
+          data:{
+             number: 1,
+             content: content
+          }
+        });
+      }
+    </script><script>
+      function downvote(i){
+        var index = "#idea" + i;
+        var content = $(index).text();
+
+        $.ajax({
+          type: 'POST',
+          url: 'get.php',
+          data:{
+             number: -1,
+             content: content
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
