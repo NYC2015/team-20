@@ -28,6 +28,10 @@ function fetch_data(){
 		('idea_ID','plan','product desceiption','marketing plan',
 			'startup_cost','cost_per_unit','revenue') VALUES ($idea_ID,);
 	}
+
+	mysql_query(inserquery);
+
+	echo("You are all set, now track your progress");
 }
 
 fetch_data();
