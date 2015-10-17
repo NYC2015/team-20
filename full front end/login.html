@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Sat Oct 17 2015 15:27:56 GMT+0000 (UTC) -->
+<html data-wf-site="562224844188c71c5ad8bf06" data-wf-page="56223736281a128c5444d673">
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/job-club.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700","Varela Round:400","Varela:400"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/webclip-gallio.png">
+  <link rel="apple-touch-icon" href="images/webclip-gallio.png">
+</head>
+<body>
+  <header class="w-section nav-bar">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-4 w-clearfix brand-column"><img class="logo" width="41px" src="images/1-logo.png">
+          <div class="company">Job Club</div>
+        </div>
+        <nav class="w-col w-col-8 nav-column"><a class="nav-link" href="#features">Sign UP</a><a class="nav-link sign-up" href="login.html">Submit an Idea</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="w-section section hero">
+    <div class="w-container">
+      <h1 class="hero-heading">Student Login</h1>
+      <p class="hero-subhead">Job Club students are immersed in the world of careers, develop basic work-related skills, learn principles &nbsp;behind banking and savings, and participate in business activities that will expose them to entrepreneurship.</p>
+      <div class="w-form">
+        <form id="email-form" name="email-form" data-name="Email Form" data-redirect="http://job-club.webflow.io/submit-an-idea">
+          <label class="mont" for="Email-2">Email:</label>
+          <input class="w-input alpha" id="Email-2" type="email" placeholder="Enter a registered email" name="Email" data-name="Email" required="required">
+          <label class="mont" for="Password">Password:</label>
+          <input class="w-input alpha" id="Password" type="password" name="Password" data-name="Password" required="required">
+          <input class="w-button mont" type="submit" value="Submit" data-wait="Please wait...">
+        </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sad"></div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+</html>
